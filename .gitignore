@@ -1,0 +1,6 @@
+*.out
+*.o
+*.so
+*.profdata
+*.profraw
+*.exe
