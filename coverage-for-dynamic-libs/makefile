@@ -17,7 +17,7 @@ hello.o: hello.cpp hello.h
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
 libhello.so: hello.o
-	$(CXX) -shared -o $@ $<
+	$(CXX) -shared -o $@ $< $(CXXFLAGS)
 
 hello.exe: libhello.so main.cpp
 	$(CXX) -L. -lhello -Wl,-rpath=. -o $@ main.cpp $(CXXFLAGS)
